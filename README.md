@@ -144,7 +144,7 @@ This process will take some time. So, keep patience until all the libraries and 
    make -j4  
    sudo make install  
    ```
-##### Old verison:
+##### Old verison: (this version has some mistake)
    ```
    sudo apt update
    sudo apt install libxaw7-dev
@@ -161,6 +161,10 @@ This process will take some time. So, keep patience until all the libraries and 
    make
    sudo make install
    ```
+##### be basic: 
+ ```
+ sudo apt install ngspice
+ ```
    
  - **VERIFY NGspice installation :-**  
    If ngspice has been installed properly it will show as following in terminal. NGspice is **command line interface (CLI)** , so that you can’t see any GUI window.  
@@ -248,6 +252,8 @@ This process will take some time. So, keep patience until all the libraries and 
  - Install **Open_Pdks** that will provide among other things all the sky130 PDK data, including standard cells, SPICE models, layout data, timing information, design rules and provides also also the Xschem symbols of available silicon primitive devices and the set of logic standard cells built on top of these primitive devices.
  - Please ensure sufficient disk space is available (**Open_pdks** uses several GB, a lot of space can be recovered after installation by removing the source files if needed). Also keep in mind that the installation takes considerable time.  
  
+ #### Sky 130 PDK Installation (http://opencircuitdesign.com/open_pdks/index.html)
+   
  #### Sky 130 PDK Installation  
  - Change directory to **pdk** which has been created earlier.  
    ```  

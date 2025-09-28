@@ -46,11 +46,11 @@ This process will take some time. So, keep patience until all the libraries and 
    - **Create new directory 'design' and sub-directories 'tools' and 'pdks':-**  
      - Create this directory in **/home** directory  location.  
        ```  
-       mkdir open_source   
+       mkdir analog_open_source   
        ```  
      - Entering into the **open_source** directory -  
        ```  
-       cd design  
+       cd analog_open_source/  
        ```
      - Creating two directories named as **tools** & **pdk**   
        ```  
@@ -61,13 +61,24 @@ This process will take some time. So, keep patience until all the libraries and 
 
 [Xschem](http://repo.hu/projects/xschem/xschem_man/xschem_man.html) is a **schematic capture program** that allows to interactively enter an electronic circuit using a graphical and easy to use interface. When the schematic has been created a circuit netlist can be generated for simulation.
 ####Installation of Xschem :-
-- Change directory to tools, which is the sub-folder of **open_source**  
+- Change directory to tools, which is the sub-folder of **open_source**
+- nice docsc: http://repo.hu/projects/xschem/xschem_man/install_xschem.html
   ```  
-  cd  ~/open_source/tools   
+  cd  ~/analog_open_source/tools   
   ```  
  - **Download xschem from github:-**  
    ```  
    git clone https://github.com/StefanSchippers/xschem.git   
+   ```
+
+   ```
+   sudo apt update
+   sudo apt install build-essential git autoconf automake libtool pkg-config libx11-dev libxext-dev libxft-dev libxpm-dev libgtk-3-dev
+   sudo apt install nodejs npm
+   sudo apt install build-essential git autoconf automake libtool pkg-config
+   sudo apt install libx11-dev libxrender-dev libx11-xcb-dev libcairo2-dev
+   sudo apt install tcl8.6-dev tk8.6-dev flex bison libxpm-dev libjpeg-dev
+   sudo apt install xterm vim-gtk3 gawk tcl-tclreadline
    ```
  - **Xschem** binaries will be inside this *xschem* folder  
    ```  
@@ -97,12 +108,17 @@ This process will take some time. So, keep patience until all the libraries and 
 ####Ngspice installation steps :- 
 - Migrate to the tools installation root directory.  
   ```  
-  cd ~/open_source/tools  
+  cd ~/analog_open_source/tools  
   ```  
  - **Download ngspice from github:-**  
    ```  
    git clone https://git.code.sf.net/p/ngspice/ngspice ngspice_git  
-   ```   
+   ```
+   ```
+   sudo apt update
+   sudo apt install libxaw7-dev
+   sudo apt install libreadline-dev
+   ```
  - Ngspice binary has been dowloaded. Move to the given directory.  
    ```  
    cd ngspice_git  
@@ -112,7 +128,7 @@ This process will take some time. So, keep patience until all the libraries and 
    ./autogen.sh --adms  
    mkdir release  
    cd release  
-   ./configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp	
+   ../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp	
    make -j4  
    sudo make install  
    ```   
@@ -126,7 +142,8 @@ This process will take some time. So, keep patience until all the libraries and 
 
 ###GAW Installation
  - **GAW** is used to display output waveforms from xschem simulation.  
- - Migrate to the tools installation root directory.  
+ - Migrate to the tools installation root directory.
+ - to download "gaw3-20250128.tar.gz" -> https://www.rvq.fr/linux/gaw.php
    ```  
    cd ~/open_source/tools   
    ```  
@@ -152,7 +169,11 @@ This process will take some time. So, keep patience until all the libraries and 
     ```  
     cd ~/open_source/tools
     git clone https://github.com/RTimothyEdwards/magic
-    ```  
+    ```
+    ```
+    sudo apt update
+    sudo apt install freeglut3-dev mesa-common-dev libglu1-mesa-dev
+    ```
  - **Magic installation**-  
    ```
    cd magic  
@@ -304,6 +325,7 @@ cd klayout
    ```  
    ``` 
    https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.11-1_amd64.deb
+   My Choice: https://www.klayout.de/build.html
    ```  
  - Follow these steps to install klayout
    ```  

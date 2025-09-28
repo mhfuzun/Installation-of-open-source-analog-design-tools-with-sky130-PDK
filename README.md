@@ -375,7 +375,13 @@ cd klayout
     - **Verify the installation of netgen (With PDK integration)**  
       ```  
       klayout 
-      ```  
+      ```
+ - **My intergration (by ChatGPT)**
+    - Link in home:
+      ```
+      mkdir -p ~/.klayout/tech/sky130A
+      ln -s /usr/local/share/pdk/sky130A/libs.tech/klayout/tech/sky130A.lyt ~/.klayout/tech/sky130A/sky130A.lyt
+      ```
 
 ![klayout_pdk](/image/8_klayout_pdk.png)
    

@@ -1,6 +1,18 @@
 # Installation-of-open-source-analog-design-tools-with-sky130-PDK
  Analog design tools - 1) Xschem , 2) Gaw , 3) Ngspice , 4) Magic , 5) Klayout . Follow this repository to install all the necessary tools for analog VLSI designing.
 
+## my system:
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.3 LTS
+Release:	24.04
+Codename:	noble
+$ uname -r
+6.8.0-84-generic
+```
+
 ## Contents  
 - [1. Tools and PDK Setup](#1-Tools-and-PDK-setup)  
   - [1.1 Tools Setup](#11-Tools-setup)
@@ -131,7 +143,25 @@ This process will take some time. So, keep patience until all the libraries and 
    ../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp	
    make -j4  
    sudo make install  
-   ```   
+   ```
+##### Old verison:
+   ```
+   sudo apt update
+   sudo apt install libxaw7-dev
+   sudo apt install libreadline-dev
+   ```
+   ```
+   cd ~/analog_open_source/tools
+   git clone https://github.com/ngspice/ngspice.git
+   cd ngspice/
+   ./autogen.sh
+   mkdir debug
+   cd debug/
+   ../configure --with-x --with-readline=yes
+   make
+   sudo make install
+   ```
+   
  - **VERIFY NGspice installation :-**  
    If ngspice has been installed properly it will show as following in terminal. NGspice is **command line interface (CLI)** , so that you can’t see any GUI window.  
    Type the following command -  
@@ -167,7 +197,7 @@ This process will take some time. So, keep patience until all the libraries and 
 
  - **Magic download**- 
     ```  
-    cd ~/open_source/tools
+    cd ~/analog_open_source/tools
     git clone https://github.com/RTimothyEdwards/magic
     ```
     ```
@@ -195,7 +225,7 @@ This process will take some time. So, keep patience until all the libraries and 
 
  - Move to the root directory of tool installation.
   ```
-  cd ~/open_source/tools
+  cd ~/analog_open_source/tools
   ```
  - **Download netgen from github**:-  
    ```  
@@ -221,7 +251,7 @@ This process will take some time. So, keep patience until all the libraries and 
  #### Sky 130 PDK Installation  
  - Change directory to **pdk** which has been created earlier.  
    ```  
-   cd ~/open_source/pdk	
+   cd ~/analog_open_source/pdk	
    ```  
  - **Download pdk from github** :-	
    ```  
@@ -310,7 +340,7 @@ This process will take some time. So, keep patience until all the libraries and 
 
 #### KLayout Installation   
 ``` 
-cd ~/open_source/tools/  
+cd ~/analog_open_source/tools/  
 mkdir klayout
 cd klayout
 ```  
@@ -321,7 +351,7 @@ cd klayout
   ```
  - Download Klayout binaries from following link through browser in following location:   
    ```  
-   ~/open_source/tools/klayout
+   ~/analog_open_source/tools/klayout
    ```  
    ``` 
    https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.11-1_amd64.deb

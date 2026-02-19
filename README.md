@@ -183,7 +183,7 @@ This process will take some time. So, keep patience until all the libraries and 
    ```  
  - Copy the download link of zip file of gaw.  
    ``` 
-   wget http://download.tuxfamily.org/gaw/download/gaw3-20220315.tar.gz   
+   wget http://download.tuxfamily.org/gaw/download/gaw3-20250128.tar.gz
    tar -xvzf gaw3-20250128.tar.gz
    cd gaw3-20220315	 
    ./configure  

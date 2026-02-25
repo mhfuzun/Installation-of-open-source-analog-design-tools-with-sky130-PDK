@@ -283,50 +283,28 @@ This process will take some time. So, keep patience until all the libraries and 
    ```  
  - You can check there will will be **two PDK variants** -
    1)  **sky130A** 	
-   2)  **sky130B**  
-
-#### Project directory setup:-
- - Create a new project directory in **$HOME** where circuit design will be done.	
+   2)  **sky130B**
+  
+#### XSCHEM Design Area
    ```  
-   mkdir design   
-   ```  
- - Create directories for running individual tools:-  	 
-   ``` 
+   mkdir design
    cd design
-   mkdir xschem magic netgen  
-   ```  
- #### Xschem setup:- 
- - Setup for running xschem and ngspice with sky130 pdk. 
- - **N.B - Please carefully follow these steps and do the same which has been shown here. If  any mistake occured during this set-up process, either Xschem or NGspice will show you error.**  
- - Change the directory to _**xschem**_ which has been created earlier.
-   ```  
-   cd xschem	
-   ln -s /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc	  
-   ln -s /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit      
-   ```  
- - Write this command to check wheather the path has been linked properly or not.You will see the lines in the terminal which has been shown in the following diagram if PDK path and NGspice path has been properly linked with xschem.  
-   ```  
-   ll  
-   ```  
-   ![pdk setup](image/4_pdk_setup.png)  
- - **XSCHEM integrated with sky130 PDK**  
-   - Run '**xschem**' on terminal and will get xschem main page showing sky130 devices. 
-   - Always invoke xschem from this directory as the .xschemrc and .spiceinit files are present at this folder.
-   - You can see the top schematic page which has been shown in the following diagram if you followed all the steps properly. Congratulations, now xschem is fully integrated with sky130 PDK. 
-   - Invoke xschem from terminal.  
-     ``` 
-     xschem &  
-     ```  
-![xschem with pdk](image/5_xschem_pdk.png)  
+   mkdir xschem magic netgen
+   ```
+
+#### Xschem setup:
+   ```
+   cd xschem
+   echo 'source /usr/local/share/pdk/sky130B/libs.tech/xschem/xschemrc' > ./xschemrc
+   xschem &
+   ```
+![xschem with pdk](image/5_xschem_pdk.png)
 
 #### MAGIC setup for SKY130 PDK INTEGRATION
- - Do setup for running magic with sky130 pdk.
-   ```  
-   cd ~/design/magic
-   ln -s /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
-   ```  
- - **Verify the installation of MAGIC (With PDK integration)**
-    - Run '**magic'** on terminal and magic window will open with **sky130A** technology shown integrated in window. (Always invoke magic from the **/home/design/magic** location to access pdk libraries).  
+   ```
+   echo 'source /usr/local/share/pdk/sky130B/libs.tech/magic/sky130B.magicrc' > ./sky130B.magicrc
+   magic &
+   ```
 
 ![magic pdk](image/6_magic_pdk.png)  
 

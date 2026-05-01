@@ -302,7 +302,7 @@ This process will take some time. So, keep patience until all the libraries and 
 
 #### MAGIC setup for SKY130 PDK INTEGRATION
    ```
-   echo 'source /usr/local/share/pdk/sky130B/libs.tech/magic/sky130B.magicrc' > ./sky130B.magicrc
+   echo 'source /usr/local/share/pdk/sky130B/libs.tech/magic/sky130B.magicrc' > ./.magicrc
    magic &
    ```
 
@@ -312,7 +312,7 @@ This process will take some time. So, keep patience until all the libraries and 
  - Do setup for netgen with sky130 pdk
    ```  
    cd ~/design/netgen
-   ln -s /usr/local/share/pdk/sky130A/libs.tech/netgen/setup.tcl setup.tcl
+   ln -s /usr/local/share/pdk/sky130B/libs.tech/netgen/setup.tcl setup.tcl
    ```  
  - **Verify the installation of netgen (With PDK integration)**  
    - Run **'netgen'** on terminal, netgen window will open,

@@ -40,7 +40,7 @@ ndiff + nsdm + poly crossing + lvtn marker
 3. ndiff_ncontact, ile ndiffusion locali'ye bağlanır.  ndiffusion <> locali
 ![2](magic/mos/nwellBulk_3_ndiffusion_ncon.png)
 
-4. locali katı
-![2](magic/mos/nwellBulk_4_locali.png.png)
+4. locali katı, locali tüm nsub_ndiff'i kaplar
+![2](magic/mos/nwellBulk_4_locali.png)
 
-5. metal katı otomatik gelmezz!
+1. metal katı otomatik gelmezz!
